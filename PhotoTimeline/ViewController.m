@@ -1,15 +1,9 @@
-//
-//  ViewController.m
-//  PhotoTimeline
-//
-//  Created by Kurtis Seebaldt on 4/17/13.
-//  Copyright (c) 2013 Kurtis Seebaldt. All rights reserved.
-//
-
 #import "ViewController.h"
+#import "PhotoTimelineDataSource.h"
 
 @interface ViewController ()
-
+@property (strong, nonatomic) PhotoTimelineDataSource *dataSource;
+@property (strong, nonatomic) UICollectionView *collectionView;
 @end
 
 @implementation ViewController
@@ -17,7 +11,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+    layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+    self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:layout];
+    self.dataSource = [[PhotoTimelineDataSource alloc] init];
+    [self.dataSource registerCellsOnCollectionView:self.collectionView];
+    self.collectionView.dataSource = self.dataSource;
+    [self.view addSubview:self.collectionView];
 }
 
 - (void)didReceiveMemoryWarning
