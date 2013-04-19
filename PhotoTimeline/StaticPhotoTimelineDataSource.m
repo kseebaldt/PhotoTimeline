@@ -1,9 +1,9 @@
-#import "PhotoTimelineDataSource.h"
+#import "StaticPhotoTimelineDataSource.h"
 #import "PhotoTimelineCell.h"
 
 static NSString * const photoCellIdentifier = @"PhotoCell";
 
-@implementation PhotoTimelineDataSource
+@implementation StaticPhotoTimelineDataSource
 
 - (void)registerCellsOnCollectionView:(UICollectionView *)collectionView {
     [collectionView registerClass:[PhotoTimelineCell class] forCellWithReuseIdentifier:photoCellIdentifier];

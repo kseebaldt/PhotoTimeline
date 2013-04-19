@@ -1,19 +1,19 @@
-#import "PhotoTimelineDataSource.h"
+#import "StaticPhotoTimelineDataSource.h"
 #import "PhotoTimelineLayout.h"
 #import "PhotoTimelineCell.h"
 
 using namespace Cedar::Matchers;
 using namespace Cedar::Doubles;
 
-SPEC_BEGIN(PhotoTimelineDataSourceSpec)
+SPEC_BEGIN(StaticPhotoTimelineDataSourceSpec)
 
-describe(@"PhotoTimelineDataSource", ^{
-    __block PhotoTimelineDataSource *dataSource;
+describe(@"StaticPhotoTimelineDataSource", ^{
+    __block StaticPhotoTimelineDataSource *dataSource;
     __block UICollectionView *collectionView;
     __block UICollectionViewFlowLayout *layout;
 
     beforeEach(^{
-        dataSource = [[[PhotoTimelineDataSource alloc] init] autorelease];
+        dataSource = [[[StaticPhotoTimelineDataSource alloc] init] autorelease];
         layout = [[[UICollectionViewFlowLayout alloc] init] autorelease];
         collectionView = [[[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, 120, 90) collectionViewLayout:layout] autorelease];
         [dataSource registerCellsOnCollectionView:collectionView];

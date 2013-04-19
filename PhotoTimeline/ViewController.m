@@ -1,8 +1,9 @@
 #import "ViewController.h"
-#import "PhotoTimelineDataSource.h"
+#import "StaticPhotoTimelineDataSource.h"
+#import "PhotoTimelineLayout.h"
 
 @interface ViewController ()
-@property (strong, nonatomic) PhotoTimelineDataSource *dataSource;
+@property (strong, nonatomic) StaticPhotoTimelineDataSource *dataSource;
 @property (strong, nonatomic) UICollectionView *collectionView;
 @end
 
@@ -11,10 +12,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
-    layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+    PhotoTimelineLayout *layout = [[PhotoTimelineLayout alloc] init];
+    layout.itemSize = CGSizeMake(200, 200);
     self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:layout];
-    self.dataSource = [[PhotoTimelineDataSource alloc] init];
+    self.dataSource = [[StaticPhotoTimelineDataSource alloc] init];
     [self.dataSource registerCellsOnCollectionView:self.collectionView];
     self.collectionView.dataSource = self.dataSource;
     [self.view addSubview:self.collectionView];

@@ -24,7 +24,7 @@
 		E168A050171EDA3000515315 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E157B6A5171ED53500E7CA07 /* Foundation.framework */; };
 		E168A056171EDA3000515315 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E168A054171EDA3000515315 /* InfoPlist.strings */; };
 		E168A05A171EDA3100515315 /* Cedar-iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E168A059171EDA3100515315 /* Cedar-iOS.framework */; };
-		E168A061171EDA9900515315 /* PhotoTimelineDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = E168A060171EDA9900515315 /* PhotoTimelineDataSource.m */; };
+		E168A061171EDA9900515315 /* StaticPhotoTimelineDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = E168A060171EDA9900515315 /* StaticPhotoTimelineDataSource.m */; };
 		E168A064171EE1A600515315 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E168A062171EE19500515315 /* AssetsLibrary.framework */; };
 		E168A070171EE5DD00515315 /* image1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E168A066171EE5DD00515315 /* image1.jpg */; };
 		E168A071171EE5DD00515315 /* image1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E168A066171EE5DD00515315 /* image1.jpg */; };
@@ -46,9 +46,12 @@
 		E168A081171EE5DD00515315 /* image9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E168A06E171EE5DD00515315 /* image9.jpg */; };
 		E168A082171EE5DD00515315 /* image10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E168A06F171EE5DD00515315 /* image10.jpg */; };
 		E168A083171EE5DD00515315 /* image10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E168A06F171EE5DD00515315 /* image10.jpg */; };
-		E168A085171EE61600515315 /* PhotoTimelineDataSourceSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = E168A084171EE61600515315 /* PhotoTimelineDataSourceSpec.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E168A085171EE61600515315 /* StaticPhotoTimelineDataSourceSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = E168A084171EE61600515315 /* StaticPhotoTimelineDataSourceSpec.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E168A08B171EE7F600515315 /* PhotoTimelineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E168A08A171EE7F600515315 /* PhotoTimelineCell.m */; };
 		E168A08D171EE86800515315 /* PhotoTimelineCellSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = E168A08C171EE86800515315 /* PhotoTimelineCellSpec.mm */; };
+		E168A090171EF0CF00515315 /* PhotoTimelineLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = E168A08F171EF0CF00515315 /* PhotoTimelineLayout.m */; };
+		E168A092171EF1E300515315 /* PhotoTimelineLayoutSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = E168A091171EF1E300515315 /* PhotoTimelineLayoutSpec.mm */; };
+		E168A09417216C8900515315 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E157B6A7171ED53500E7CA07 /* CoreGraphics.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,8 +78,8 @@
 		E168A055171EDA3000515315 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E168A059171EDA3100515315 /* Cedar-iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Cedar-iOS.framework"; path = "Frameworks/Cedar-iOS.framework"; sourceTree = "<group>"; };
 		E168A05B171EDA3100515315 /* Specs-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Specs-Prefix.pch"; sourceTree = "<group>"; };
-		E168A05F171EDA9900515315 /* PhotoTimelineDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoTimelineDataSource.h; sourceTree = "<group>"; };
-		E168A060171EDA9900515315 /* PhotoTimelineDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoTimelineDataSource.m; sourceTree = "<group>"; };
+		E168A05F171EDA9900515315 /* StaticPhotoTimelineDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StaticPhotoTimelineDataSource.h; sourceTree = "<group>"; };
+		E168A060171EDA9900515315 /* StaticPhotoTimelineDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StaticPhotoTimelineDataSource.m; sourceTree = "<group>"; };
 		E168A062171EE19500515315 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		E168A066171EE5DD00515315 /* image1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image1.jpg; sourceTree = "<group>"; };
 		E168A067171EE5DD00515315 /* image2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image2.jpg; sourceTree = "<group>"; };
@@ -88,10 +91,14 @@
 		E168A06D171EE5DD00515315 /* image8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image8.jpg; sourceTree = "<group>"; };
 		E168A06E171EE5DD00515315 /* image9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image9.jpg; sourceTree = "<group>"; };
 		E168A06F171EE5DD00515315 /* image10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image10.jpg; sourceTree = "<group>"; };
-		E168A084171EE61600515315 /* PhotoTimelineDataSourceSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PhotoTimelineDataSourceSpec.mm; sourceTree = "<group>"; };
+		E168A084171EE61600515315 /* StaticPhotoTimelineDataSourceSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = StaticPhotoTimelineDataSourceSpec.mm; sourceTree = "<group>"; };
 		E168A089171EE7F600515315 /* PhotoTimelineCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoTimelineCell.h; sourceTree = "<group>"; };
 		E168A08A171EE7F600515315 /* PhotoTimelineCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoTimelineCell.m; sourceTree = "<group>"; };
 		E168A08C171EE86800515315 /* PhotoTimelineCellSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PhotoTimelineCellSpec.mm; sourceTree = "<group>"; };
+		E168A08E171EF0CF00515315 /* PhotoTimelineLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoTimelineLayout.h; sourceTree = "<group>"; };
+		E168A08F171EF0CF00515315 /* PhotoTimelineLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoTimelineLayout.m; sourceTree = "<group>"; };
+		E168A091171EF1E300515315 /* PhotoTimelineLayoutSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PhotoTimelineLayoutSpec.mm; sourceTree = "<group>"; };
+		E168A093171EF67E00515315 /* CustomMatchers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomMatchers.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +121,7 @@
 				E168A04F171EDA3000515315 /* UIKit.framework in Frameworks */,
 				E168A050171EDA3000515315 /* Foundation.framework in Frameworks */,
 				E168A05A171EDA3100515315 /* Cedar-iOS.framework in Frameworks */,
+				E168A09417216C8900515315 /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,10 +170,12 @@
 				E157B6BE171ED53500E7CA07 /* ViewController_iPhone.xib */,
 				E157B6C1171ED53500E7CA07 /* ViewController_iPad.xib */,
 				E157B6AA171ED53500E7CA07 /* Supporting Files */,
-				E168A05F171EDA9900515315 /* PhotoTimelineDataSource.h */,
-				E168A060171EDA9900515315 /* PhotoTimelineDataSource.m */,
+				E168A05F171EDA9900515315 /* StaticPhotoTimelineDataSource.h */,
+				E168A060171EDA9900515315 /* StaticPhotoTimelineDataSource.m */,
 				E168A089171EE7F600515315 /* PhotoTimelineCell.h */,
 				E168A08A171EE7F600515315 /* PhotoTimelineCell.m */,
+				E168A08E171EF0CF00515315 /* PhotoTimelineLayout.h */,
+				E168A08F171EF0CF00515315 /* PhotoTimelineLayout.m */,
 			);
 			path = PhotoTimeline;
 			sourceTree = "<group>";
@@ -189,8 +199,10 @@
 			children = (
 				E168A059171EDA3100515315 /* Cedar-iOS.framework */,
 				E168A052171EDA3000515315 /* Supporting Files */,
-				E168A084171EE61600515315 /* PhotoTimelineDataSourceSpec.mm */,
+				E168A084171EE61600515315 /* StaticPhotoTimelineDataSourceSpec.mm */,
 				E168A08C171EE86800515315 /* PhotoTimelineCellSpec.mm */,
+				E168A091171EF1E300515315 /* PhotoTimelineLayoutSpec.mm */,
+				E168A093171EF67E00515315 /* CustomMatchers.h */,
 			);
 			path = Specs;
 			sourceTree = "<group>";
@@ -355,8 +367,9 @@
 				E157B6B0171ED53500E7CA07 /* main.m in Sources */,
 				E157B6B4171ED53500E7CA07 /* AppDelegate.m in Sources */,
 				E157B6BD171ED53500E7CA07 /* ViewController.m in Sources */,
-				E168A061171EDA9900515315 /* PhotoTimelineDataSource.m in Sources */,
+				E168A061171EDA9900515315 /* StaticPhotoTimelineDataSource.m in Sources */,
 				E168A08B171EE7F600515315 /* PhotoTimelineCell.m in Sources */,
+				E168A090171EF0CF00515315 /* PhotoTimelineLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,8 +377,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E168A085171EE61600515315 /* PhotoTimelineDataSourceSpec.mm in Sources */,
+				E168A085171EE61600515315 /* StaticPhotoTimelineDataSourceSpec.mm in Sources */,
 				E168A08D171EE86800515315 /* PhotoTimelineCellSpec.mm in Sources */,
+				E168A092171EF1E300515315 /* PhotoTimelineLayoutSpec.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,6 +512,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Specs/Specs-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "";
 				INFOPLIST_FILE = "Specs/Specs-Info.plist";
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -521,6 +536,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Specs/Specs-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "";
 				INFOPLIST_FILE = "Specs/Specs-Info.plist";
 				OTHER_LDFLAGS = (
 					"-ObjC",

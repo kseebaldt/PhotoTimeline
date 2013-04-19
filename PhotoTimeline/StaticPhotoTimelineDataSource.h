@@ -1,6 +1,6 @@
 #import <Foundation/Foundation.h>
 
-@interface PhotoTimelineDataSource : NSObject <UICollectionViewDataSource>
+@interface StaticPhotoTimelineDataSource : NSObject <UICollectionViewDataSource>
 
 - (void)registerCellsOnCollectionView:(UICollectionView *)collectionView;
 
