@@ -52,6 +52,7 @@
 		E168A090171EF0CF00515315 /* PhotoTimelineLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = E168A08F171EF0CF00515315 /* PhotoTimelineLayout.m */; };
 		E168A092171EF1E300515315 /* PhotoTimelineLayoutSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = E168A091171EF1E300515315 /* PhotoTimelineLayoutSpec.mm */; };
 		E168A09417216C8900515315 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E157B6A7171ED53500E7CA07 /* CoreGraphics.framework */; };
+		E168A09717217D0500515315 /* LineView.m in Sources */ = {isa = PBXBuildFile; fileRef = E168A09617217D0500515315 /* LineView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -99,6 +100,8 @@
 		E168A08F171EF0CF00515315 /* PhotoTimelineLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoTimelineLayout.m; sourceTree = "<group>"; };
 		E168A091171EF1E300515315 /* PhotoTimelineLayoutSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PhotoTimelineLayoutSpec.mm; sourceTree = "<group>"; };
 		E168A093171EF67E00515315 /* CustomMatchers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomMatchers.h; sourceTree = "<group>"; };
+		E168A09517217D0500515315 /* LineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineView.h; sourceTree = "<group>"; };
+		E168A09617217D0500515315 /* LineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +179,8 @@
 				E168A08A171EE7F600515315 /* PhotoTimelineCell.m */,
 				E168A08E171EF0CF00515315 /* PhotoTimelineLayout.h */,
 				E168A08F171EF0CF00515315 /* PhotoTimelineLayout.m */,
+				E168A09517217D0500515315 /* LineView.h */,
+				E168A09617217D0500515315 /* LineView.m */,
 			);
 			path = PhotoTimeline;
 			sourceTree = "<group>";
@@ -370,6 +375,7 @@
 				E168A061171EDA9900515315 /* StaticPhotoTimelineDataSource.m in Sources */,
 				E168A08B171EE7F600515315 /* PhotoTimelineCell.m in Sources */,
 				E168A090171EF0CF00515315 /* PhotoTimelineLayout.m in Sources */,
+				E168A09717217D0500515315 /* LineView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

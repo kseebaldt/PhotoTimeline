@@ -13,10 +13,10 @@ static NSString * const photoCellIdentifier = @"PhotoCell";
     return 10;
 }
 
-// The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     PhotoTimelineCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:photoCellIdentifier forIndexPath:indexPath];
-    cell.image = [UIImage imageNamed:[NSString stringWithFormat:@"image%d.jpg", indexPath.item + 1]];
+    NSString *imageName = [NSString stringWithFormat:@"image%d.jpg", indexPath.item + 1];
+    cell.image = [UIImage imageNamed:imageName];
     return cell;
 }
 

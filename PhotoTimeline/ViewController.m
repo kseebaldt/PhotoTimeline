@@ -1,6 +1,7 @@
 #import "ViewController.h"
 #import "StaticPhotoTimelineDataSource.h"
 #import "PhotoTimelineLayout.h"
+#import "LineView.h"
 
 @interface ViewController ()
 @property (strong, nonatomic) StaticPhotoTimelineDataSource *dataSource;
@@ -14,7 +15,9 @@
     [super viewDidLoad];
     PhotoTimelineLayout *layout = [[PhotoTimelineLayout alloc] init];
     layout.itemSize = CGSizeMake(200, 200);
-    self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:layout];
+    [layout registerClass:[LineView class] forDecorationViewOfKind:@"Line"];
+    [layout registerClass:[LineView class] forDecorationViewOfKind:@"PhotoLine"];
+    self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 200, CGRectGetWidth(self.view.bounds), 600) collectionViewLayout:layout];
     self.dataSource = [[StaticPhotoTimelineDataSource alloc] init];
     [self.dataSource registerCellsOnCollectionView:self.collectionView];
     self.collectionView.dataSource = self.dataSource;
